@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>AI Website Builder</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    />
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    />
+
+    <!-- FastAPI serves frontend assets from /assets -->
+    <link
+        rel="stylesheet"
+        href="/assets/style.css"
+    />
+</head>
+
+<body>
+    <div class="page-shell">
+
+        <header class="topbar">
+            <div class="brand-wrap">
+
+                <div class="brand-mark">
+                    AI
+                </div>
+
+                <div>
+                    <p class="eyebrow">
+                        PortfolioAgent
+                    </p>
+
+                    <h1>
+                        AI Website Builder
+                    </h1>
+                </div>
+
+            </div>
+        </header>
+
+
+        <main class="workspace">
+
+            <section class="composer-panel panel">
+
+                <p class="subtitle">
+                    Describe the website you want and the AI agent will build it.
+                </p>
+
+                <label
+                    class="sr-only"
+                    for="prompt"
+                >
+                    Website prompt
+                </label>
+
+                <textarea
+                    id="prompt"
+                    placeholder="Build a premium developer portfolio for Vicky Kumar with a dark theme, hero, about, skills, projects, experience, education and contact sections."
+                ></textarea>
+
+                <div class="actions">
+
+                    <button
+                        id="buildBtn"
+                        type="button"
+                    >
+                        Build Website
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <section class="meta-grid">
+
+                <article class="panel activity-panel">
+
+                    <div class="panel-header">
+                        <h2>
+                            Agent activity
+                        </h2>
+                    </div>
+
+                    <div
+                        id="activityLog"
+                        class="activity-log"
+                    >
+
+                        <div class="log-entry idle">
+
+                            <span class="dot"></span>
+
+                            <span>
+                                Ready for a new website request.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="panel result-panel">
+
+                    <div class="panel-header">
+                        <h2>
+                            Result
+                        </h2>
+                    </div>
+
+                    <div
+                        id="resultBox"
+                        class="result-box"
+                    >
+
+                        <p class="placeholder">
+                            Your generated website details will appear here.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- FastAPI serves frontend JavaScript from /assets -->
+    <script src="/assets/app.js"></script>
+
+</body>
+</html>
+
+
